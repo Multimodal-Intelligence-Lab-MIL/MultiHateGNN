@@ -7,7 +7,7 @@ def parse_args():
     prnt_dir = os.path.abspath(os.path.join(cur_dir, os.pardir)).replace('\\', '/')
     now = str(datetime.datetime.now())[:19].replace(':', '-').replace(' ', '_')
 
-    # train
+    ## train
     parser = argparse.ArgumentParser(description='Basic GNN')
     parser.add_argument('--logDir', default=prnt_dir + '/logs/' + now)
     parser.add_argument('--saveDir', default=prnt_dir + '/models/saved_models')
@@ -25,7 +25,7 @@ def parse_args():
     # parser.add_argument('--epsl', default=0.3)
 
 
-    # model
+    ## model
     parser.add_argument('--lstmD', default=128)
     parser.add_argument('--numLay', default=4)
     parser.add_argument('--nodeFtrD', default=32)
@@ -38,7 +38,7 @@ def parse_args():
 
 
 
-    # data
+    ## data
     parser.add_argument('--visEmdSz', default=768)
     parser.add_argument('--audEmdSz', default=40)
     parser.add_argument('--txEmdSz', default=768)
