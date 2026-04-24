@@ -128,7 +128,7 @@ def eval(loader):
     all_y_pred = torch.stack(all_y_pred, dim=0)
 
 
-    print("---------------------")
+    print("--------------------")
 
     metrics = evalMetric(all_y.cpu().data.squeeze().numpy(), all_y_pred.cpu().data.squeeze().numpy())
 
